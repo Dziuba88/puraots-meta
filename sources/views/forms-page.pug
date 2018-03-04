@@ -1,0 +1,189 @@
+-var page = 'POLL'
+doctype html
+html(lang="ro")
+  include models/head
+  body
+    .page--wraper
+      include models/header
+      main.page--content
+              .poll--slider.swiper-container
+                .swiper-wrapper
+                  .swiper-slide
+                    .step--form
+                      .step--form__body
+                        .step--form__title Denumire companie
+                        .row: .col.md-6.offset-md-3: input(type="text", placeholder="Exemplu: Google SRL")
+                      .step--ctrl
+                        .steps--indicator
+                        .btn(data-next disabled) Mai departe
+                  .swiper-slide
+                    .step--form
+                      .step--form__body
+                        .step--form__title Segment
+                        .row: .col.md-6.offset-md-3
+                          select#segment
+                            option(value='') 
+                            option(value='1') Artisani
+                            option(value='2') Lorem ipsum
+                            option(value='3') Lorem ipsum
+                            option(value='4') Lorem ipsum
+                      .step--ctrl
+                        .steps--indicator
+                        .btn(data-prev) înapoi
+                        .btn(data-next disabled) Mai departe
+                  .swiper-slide
+                    .step--form
+                      .step--form__body
+                        .step--form__title Denumire companie
+                        .row: .col.md-6.offset-md-3: input(type="text", placeholder="Exemplu: Google SRL")
+                      .step--ctrl
+                        .steps--indicator
+                        .btn(data-prev) înapoi
+                        .btn(data-next disabled) Mai departe
+                  .swiper-slide
+                    .step--form
+                      .step--form__body
+                        .step--form__title În general, luînd in considerare toate aspectele pe care le considerați importante, cat de mulțumit sunteți de produsele Puratos?
+                        .row: .col.md-6.offset-md-3
+                          .star-rating
+                            .star-rating__wrap
+                              input.star-rating__input#star-rating-5(type="radio" name="rating" value="5")
+                              label.star-rating__icon(for="star-rating-5"): svg: use(xlink:href="#heart")
+                              input.star-rating__input#star-rating-4(type="radio" name="rating" value="4")
+                              label.star-rating__icon(for="star-rating-4"): svg: use(xlink:href="#heart")
+                              input.star-rating__input#star-rating-3(type="radio" name="rating" value="3")
+                              label.star-rating__icon(for="star-rating-3"): svg: use(xlink:href="#heart")
+                              input.star-rating__input#star-rating-2(type="radio" name="rating" value="2")
+                              label.star-rating__icon(for="star-rating-2"): svg: use(xlink:href="#heart")
+                              input.star-rating__input#star-rating-1(type="radio" name="rating" value="1")
+                              label.star-rating__icon(for="star-rating-1"): svg: use(xlink:href="#heart")
+                      .step--ctrl
+                        .steps--indicator
+                        .btn(data-prev) înapoi
+                        .btn(data-next disabled) Mai departe
+                  .swiper-slide
+                    .step--form
+                      .step--form__body
+                        .step--form__title Cum ați evalua performanța produselor Puratos comparativ cu produse similare oferite de alți furnizori ai Dvs.?
+                        .radio-group
+                            input#r-1(type="radio" name="g1" value="1")
+                            label(for="r-1") 
+                              span.radio-group__input
+                              span.radio-group__label Produsele Puratos nu sunt la fel de performante calitativ față de cele ale competitorilor
+                            input#r-2(type="radio" name="g1" value="2")
+                            label(for="r-2") 
+                              span.radio-group__input
+                              span.radio-group__label Produsele Puratos sunt la fel de performante calitativ precum ale competitorilor 
+                            input#r-3(type="radio" name="g1" value="3")
+                            label(for="r-3") 
+                              span.radio-group__input
+                              span.radio-group__label Produsele Puratos sunt mai performante calitativ față de cele ale competitorilor 
+                            input#r-4(type="radio" name="g1" value="4")
+                            label(for="r-4") 
+                              span.radio-group__input
+                              span.radio-group__label Nu pot aprecia
+                      .step--ctrl
+                        .steps--indicator
+                        .btn(data-prev) înapoi
+                        .btn(data-next disabled) Mai departe
+                  .swiper-slide
+                    .step--form
+                      .step--form__body
+                        .step--form__title Mai jos gasiti cîteva afirmatii pe care alți clienți le-au facut despre produsele noastre. In ce masura sunteti de acord cu ele?
+                        .row
+                          .col.md-6.step--form__info Puratos are un sortiment bogat de produse
+                          .col.md-6
+                            .radio-group
+                                input#r2-1(type="radio" name="g2" value="1")
+                                label(for="r2-1") 
+                                  span.radio-group__input
+                                  span.radio-group__label Totalmente de acord
+                                input#r2-2(type="radio" name="g2" value="2")
+                                label(for="r2-2") 
+                                  span.radio-group__input
+                                  span.radio-group__label De acord 
+                                input#r2-3(type="radio" name="g2" value="3")
+                                label(for="r2-3") 
+                                  span.radio-group__input
+                                  span.radio-group__label Neutru
+                                input#r2-4(type="radio" name="g2" value="4")
+                                label(for="r2-4") 
+                                  span.radio-group__input
+                                  span.radio-group__label Nu sunt de acord
+                                input#r2-5(type="radio" name="g2" value="5")
+                                label(for="r2-5") 
+                                  span.radio-group__input
+                                  span.radio-group__label Dezacord total
+                      .step--ctrl
+                        .steps--indicator
+                        .btn(data-prev) înapoi
+                        .btn(data-next disabled) Mai departe
+                  .swiper-slide
+                    .step--form
+                      .step--form__body
+                        .step--form__title Denumire companie
+                        .row: .col.md-6.offset-md-3: input(type="text", placeholder="Exemplu: Google SRL")
+                      .step--ctrl
+                        .steps--indicator
+                        .btn(data-prev) înapoi
+                        .btn(data-next disabled) Mai departe
+                  .swiper-slide
+                    .step--form
+                      .step--form__body
+                        .step--form__title Denumire companie
+                        .row: .col.md-6.offset-md-3: input(type="text", placeholder="Exemplu: Google SRL")
+                      .step--ctrl
+                        .steps--indicator
+                        .btn(data-prev) înapoi
+                        .btn(data-next disabled) Mai departe
+                  .swiper-slide
+                    .step--form
+                      .step--form__body
+                        .step--form__title Denumire companie
+                        .row: .col.md-6.offset-md-3: input(type="text", placeholder="Exemplu: Google SRL")
+                      .step--ctrl
+                        .steps--indicator
+                        .btn(data-prev) înapoi
+                        .btn(data-next disabled) Mai departe
+                  .swiper-slide
+                    .step--form
+                      .step--form__body
+                        .step--form__title Denumire companie
+                        .row: .col.md-6.offset-md-3: input(type="text", placeholder="Exemplu: Google SRL")
+                      .step--ctrl
+                        .steps--indicator
+                        .btn(data-prev) înapoi
+                        .btn(data-next disabled) Mai departe
+                  .swiper-slide
+                    .step--form
+                      .step--form__body
+                        .step--form__title Avînd în vedere toate aspectele discutate mai sus cît de probabil este să recomandați Puratos către un prieten sau o altă companie? 
+                        .centered
+                          .centered--wraper
+                            .radio-group
+                                input#r3-1(type="radio" name="g3" value="1")
+                                label(for="r3-1") 
+                                  span.radio-group__input
+                                  span.radio-group__label Foarte probabil
+                                input#r3-2(type="radio" name="g3" value="2")
+                                label(for="r3-2") 
+                                  span.radio-group__input
+                                  span.radio-group__label Probabil
+                                input#r3-3(type="radio" name="g3" value="3")
+                                label(for="r3-3") 
+                                  span.radio-group__input
+                                  span.radio-group__label Neutru
+                                input#r3-4(type="radio" name="g2" value="4")
+                                label(for="r3-4") 
+                                  span.radio-group__input
+                                  span.radio-group__label Putin probabil
+                                input#r3-5(type="radio" name="g3" value="5")
+                                label(for="r3-5") 
+                                  span.radio-group__input
+                                  span.radio-group__label Foarte puțin probabil
+                      .step--ctrl
+                        .steps--indicator
+                        .btn(data-prev) înapoi
+                        a.btn.final(data-next href="thanks-page.html" disabled) Finalizarea chestionarului
+      include models/footer
+    include models/scripts

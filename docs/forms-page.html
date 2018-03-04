@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PURAOTS II POLL</title>
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&amp;amp;subset=latin-ext">
+    <link rel="stylesheet" href="css/styles.min.css">
+  </head>
+  <body>
+    <div class="page--wraper">
+      <header class="page--header">
+        <div class="container">
+          <svg class="brand">
+            <use xlink:href="#logo"></use>
+          </svg>
+          <div class="nav--spacer"></div>
+          <nav class="main--nav">
+            <ul>
+              <li><a href="index-page.html"><span>Home</span>
+                  <svg>
+                    <use xlink:href="#indicator"></use>
+                  </svg></a></li>
+              <li><a href="index-page.html#about"><span>Despre noi</span>
+                  <svg>
+                    <use xlink:href="#indicator"></use>
+                  </svg></a></li>
+              <li><a href="index-page.html#contacts"><span>Contacte</span>
+                  <svg>
+                    <use xlink:href="#indicator"></use>
+                  </svg></a></li>
+            </ul>
+          </nav>
+          <svg class="menu--ctrl" data-toggle="menu">
+            <use xlink:href="#menu"></use>
+          </svg>
+        </div>
+      </header>
+      <main class="page--content">
+        <div class="poll--slider swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="step--form">
+                <div class="step--form__body">
+                  <div class="step--form__title">Denumire companie</div>
+                  <div class="row">
+                    <div class="col md-6 offset-md-3">
+                      <input type="text" placeholder="Exemplu: Google SRL">
+                    </div>
+                  </div>
+                </div>
+                <div class="step--ctrl">
+                  <div class="steps--indicator"></div>
+                  <div class="btn" data-next disabled>Mai departe</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="step--form">
+                <div class="step--form__body">
+                  <div class="step--form__title">Segment</div>
+                  <div class="row">
+                    <div class="col md-6 offset-md-3">
+                      <select id="segment">
+                        <option value=""> </option>
+                        <option value="1">Artisani</option>
+                        <option value="2">Lorem ipsum</option>
+                        <option value="3">Lorem ipsum</option>
+                        <option value="4">Lorem ipsum</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="step--ctrl">
+                  <div class="steps--indicator"></div>
+                  <div class="btn" data-prev>înapoi</div>
+                  <div class="btn" data-next disabled>Mai departe</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="step--form">
+                <div class="step--form__body">
+                  <div class="step--form__title">Denumire companie</div>
+                  <div class="row">
+                    <div class="col md-6 offset-md-3">
+                      <input type="text" placeholder="Exemplu: Google SRL">
+                    </div>
+                  </div>
+                </div>
+                <div class="step--ctrl">
+                  <div class="steps--indicator"></div>
+                  <div class="btn" data-prev>înapoi</div>
+                  <div class="btn" data-next disabled>Mai departe</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="step--form">
+                <div class="step--form__body">
+                  <div class="step--form__title">În general, luînd in considerare toate aspectele pe care le considerați importante, cat de mulțumit sunteți de produsele Puratos?</div>
+                  <div class="row">
+                    <div class="col md-6 offset-md-3">
+                      <div class="star-rating">
+                        <div class="star-rating__wrap">
+                          <input class="star-rating__input" id="star-rating-5" type="radio" name="rating" value="5">
+                          <label class="star-rating__icon" for="star-rating-5">
+                            <svg>
+                              <use xlink:href="#heart"></use>
+                            </svg>
+                          </label>
+                          <input class="star-rating__input" id="star-rating-4" type="radio" name="rating" value="4">
+                          <label class="star-rating__icon" for="star-rating-4">
+                            <svg>
+                              <use xlink:href="#heart"></use>
+                            </svg>
+                          </label>
+                          <input class="star-rating__input" id="star-rating-3" type="radio" name="rating" value="3">
+                          <label class="star-rating__icon" for="star-rating-3">
+                            <svg>
+                              <use xlink:href="#heart"></use>
+                            </svg>
+                          </label>
+                          <input class="star-rating__input" id="star-rating-2" type="radio" name="rating" value="2">
+                          <label class="star-rating__icon" for="star-rating-2">
+                            <svg>
+                              <use xlink:href="#heart"></use>
+                            </svg>
+                          </label>
+                          <input class="star-rating__input" id="star-rating-1" type="radio" name="rating" value="1">
+                          <label class="star-rating__icon" for="star-rating-1">
+                            <svg>
+                              <use xlink:href="#heart"></use>
+                            </svg>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step--ctrl">
+                  <div class="steps--indicator"></div>
+                  <div class="btn" data-prev>înapoi</div>
+                  <div class="btn" data-next disabled>Mai departe</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="step--form">
+                <div class="step--form__body">
+                  <div class="step--form__title">Cum ați evalua performanța produselor Puratos comparativ cu produse similare oferite de alți furnizori ai Dvs.?</div>
+                  <div class="radio-group">
+                    <input id="r-1" type="radio" name="g1" value="1">
+                    <label for="r-1"> <span class="radio-group__input"></span><span class="radio-group__label">Produsele Puratos nu sunt la fel de performante calitativ față de cele ale competitorilor</span></label>
+                    <input id="r-2" type="radio" name="g1" value="2">
+                    <label for="r-2"> <span class="radio-group__input"></span><span class="radio-group__label">Produsele Puratos sunt la fel de performante calitativ precum ale competitorilor </span></label>
+                    <input id="r-3" type="radio" name="g1" value="3">
+                    <label for="r-3"> <span class="radio-group__input"></span><span class="radio-group__label">Produsele Puratos sunt mai performante calitativ față de cele ale competitorilor </span></label>
+                    <input id="r-4" type="radio" name="g1" value="4">
+                    <label for="r-4"> <span class="radio-group__input"></span><span class="radio-group__label">Nu pot aprecia</span></label>
+                  </div>
+                </div>
+                <div class="step--ctrl">
+                  <div class="steps--indicator"></div>
+                  <div class="btn" data-prev>înapoi</div>
+                  <div class="btn" data-next disabled>Mai departe</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="step--form">
+                <div class="step--form__body">
+                  <div class="step--form__title">Mai jos gasiti cîteva afirmatii pe care alți clienți le-au facut despre produsele noastre. In ce masura sunteti de acord cu ele?</div>
+                  <div class="row">
+                    <div class="col md-6 step--form__info">Puratos are un sortiment bogat de produse</div>
+                    <div class="col md-6">
+                      <div class="radio-group">
+                        <input id="r2-1" type="radio" name="g2" value="1">
+                        <label for="r2-1"> <span class="radio-group__input"></span><span class="radio-group__label">Totalmente de acord</span></label>
+                        <input id="r2-2" type="radio" name="g2" value="2">
+                        <label for="r2-2"> <span class="radio-group__input"></span><span class="radio-group__label">De acord </span></label>
+                        <input id="r2-3" type="radio" name="g2" value="3">
+                        <label for="r2-3"> <span class="radio-group__input"></span><span class="radio-group__label">Neutru</span></label>
+                        <input id="r2-4" type="radio" name="g2" value="4">
+                        <label for="r2-4"> <span class="radio-group__input"></span><span class="radio-group__label">Nu sunt de acord</span></label>
+                        <input id="r2-5" type="radio" name="g2" value="5">
+                        <label for="r2-5"> <span class="radio-group__input"></span><span class="radio-group__label">Dezacord total</span></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step--ctrl">
+                  <div class="steps--indicator"></div>
+                  <div class="btn" data-prev>înapoi</div>
+                  <div class="btn" data-next disabled>Mai departe</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="step--form">
+                <div class="step--form__body">
+                  <div class="step--form__title">Denumire companie</div>
+                  <div class="row">
+                    <div class="col md-6 offset-md-3">
+                      <input type="text" placeholder="Exemplu: Google SRL">
+                    </div>
+                  </div>
+                </div>
+                <div class="step--ctrl">
+                  <div class="steps--indicator"></div>
+                  <div class="btn" data-prev>înapoi</div>
+                  <div class="btn" data-next disabled>Mai departe</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="step--form">
+                <div class="step--form__body">
+                  <div class="step--form__title">Denumire companie</div>
+                  <div class="row">
+                    <div class="col md-6 offset-md-3">
+                      <input type="text" placeholder="Exemplu: Google SRL">
+                    </div>
+                  </div>
+                </div>
+                <div class="step--ctrl">
+                  <div class="steps--indicator"></div>
+                  <div class="btn" data-prev>înapoi</div>
+                  <div class="btn" data-next disabled>Mai departe</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="step--form">
+                <div class="step--form__body">
+                  <div class="step--form__title">Denumire companie</div>
+                  <div class="row">
+                    <div class="col md-6 offset-md-3">
+                      <input type="text" placeholder="Exemplu: Google SRL">
+                    </div>
+                  </div>
+                </div>
+                <div class="step--ctrl">
+                  <div class="steps--indicator"></div>
+                  <div class="btn" data-prev>înapoi</div>
+                  <div class="btn" data-next disabled>Mai departe</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="step--form">
+                <div class="step--form__body">
+                  <div class="step--form__title">Denumire companie</div>
+                  <div class="row">
+                    <div class="col md-6 offset-md-3">
+                      <input type="text" placeholder="Exemplu: Google SRL">
+                    </div>
+                  </div>
+                </div>
+                <div class="step--ctrl">
+                  <div class="steps--indicator"></div>
+                  <div class="btn" data-prev>înapoi</div>
+                  <div class="btn" data-next disabled>Mai departe</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="step--form">
+                <div class="step--form__body">
+                  <div class="step--form__title">Avînd în vedere toate aspectele discutate mai sus cît de probabil este să recomandați Puratos către un prieten sau o altă companie? </div>
+                  <div class="centered">
+                    <div class="centered--wraper">
+                      <div class="radio-group">
+                        <input id="r3-1" type="radio" name="g3" value="1">
+                        <label for="r3-1"> <span class="radio-group__input"></span><span class="radio-group__label">Foarte probabil</span></label>
+                        <input id="r3-2" type="radio" name="g3" value="2">
+                        <label for="r3-2"> <span class="radio-group__input"></span><span class="radio-group__label">Probabil</span></label>
+                        <input id="r3-3" type="radio" name="g3" value="3">
+                        <label for="r3-3"> <span class="radio-group__input"></span><span class="radio-group__label">Neutru</span></label>
+                        <input id="r3-4" type="radio" name="g2" value="4">
+                        <label for="r3-4"> <span class="radio-group__input"></span><span class="radio-group__label">Putin probabil</span></label>
+                        <input id="r3-5" type="radio" name="g3" value="5">
+                        <label for="r3-5"> <span class="radio-group__input"></span><span class="radio-group__label">Foarte puțin probabil</span></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="step--ctrl">
+                  <div class="steps--indicator"></div>
+                  <div class="btn" data-prev>înapoi</div><a class="btn final" data-next href="thanks-page.html" disabled>Finalizarea chestionarului</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="page--footer">
+        <div class="container">
+          <div class="row">
+            <div class="col sm-6"> 
+              <div class="copyryght">© IM “Puratos-Mold” SRL, 2018 <small>Developed in <a href="http://www.meta.md" target="_blank">www.meta.md</a></small></div>
+            </div>
+            <div class="col sm-6"> 
+              <div class="dropdown">
+                <div class="dropdown--toggle" data-toggle="dropdown"><span>Romanian</span>
+                  <svg>
+                    <use xlink:href="#caret"></use>
+                  </svg>
+                </div>
+                <div class="dropdown--menu"><a class="active" href="">Romanian</a><a href="">English</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

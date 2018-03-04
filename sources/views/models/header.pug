@@ -1,0 +1,16 @@
+header.page--header
+  .container
+    svg.brand: use(xlink:href="#logo")
+    .nav--spacer
+    nav.main--nav
+      ul
+        li: a(href="index-page.html")
+          span Home
+          svg: use(xlink:href="#indicator")
+        li: a(href="index-page.html#about")
+          span Despre noi
+          svg: use(xlink:href="#indicator")
+        li: a(href="index-page.html#contacts")
+          span Contacte
+          svg: use(xlink:href="#indicator")
+    svg.menu--ctrl(data-toggle="menu"): use(xlink:href="#menu")

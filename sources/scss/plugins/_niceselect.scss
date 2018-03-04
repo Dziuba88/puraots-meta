@@ -1,0 +1,75 @@
+.nice-select {
+  -webkit-tap-highlight-color: transparent;
+  background-color: #fff;
+  border: 1px solid #dddddd;
+  box-shadow: inset 0 4px 10px rgba(#dddddd, .5);
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  height: 50px;
+  line-height: 20px;
+  padding-left: 20px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: relative;
+  text-align: left !important;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  white-space: nowrap;
+}
+.nice-select.open .list {opacity: 1;pointer-events: auto;transform: scale(1) translateY(0); }
+.nice-select .list {left: 0;right: 0;}
+.nice-select .list {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(68, 68, 68, 0.11);
+  box-sizing: border-box;
+  margin-top: 4px;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform-origin: 50% 0;
+  transform: scale(0.75) translateY(-21px);
+  transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out;
+  z-index: 9;
+}
+.nice-select .option {
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 40px;
+  list-style: none;
+  min-height: 40px;
+  outline: none;
+  padding-left: 18px;
+  padding-right: 29px;
+  text-align: left;
+  transition: all 0.2s;
+
+  &:first-child {display: none;}
+}
+.nice-select .option:hover, .nice-select .option.focus, .nice-select .option.selected.focus {background-color: #f6f6f6; }
+.nice-select .option.selected {font-weight: bold; }
+.nice-select .option.disabled {display: none;}
+
+.nice-select .current {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #555555;
+}
+.nice-select svg {
+  display: block;
+  width: 9px;height: 7px;
+  fill: $color_base;
+  opacity: 0.3;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -3px;
+}

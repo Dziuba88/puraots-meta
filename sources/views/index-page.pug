@@ -1,0 +1,95 @@
+-var page = 'HOME'
+doctype html
+html(lang="ro")
+  include models/head
+  body
+    header.landing--header
+      .container
+        svg.brand: use(xlink:href="#logo")
+        nav.main--nav
+          ul
+            li: a.active(href="#home")
+              span Home
+              svg: use(xlink:href="#indicator")
+            li: a(href="#about")
+              span Despre noi
+              svg: use(xlink:href="#indicator")
+            li: a(href="#contacts")
+              span Contacte
+              svg: use(xlink:href="#indicator")
+        .nav--spacer
+        .dropdown
+          .dropdown--toggle(data-toggle="dropdown")
+            span RO
+            svg: use(xlink:href="#caret")
+          .dropdown--menu
+            a(href="").active RO
+            a(href="") EN
+        svg.menu--ctrl(data-toggle="menu"): use(xlink:href="#menu")
+    section.landing--screen#home
+      .fp--slider.swiper-container
+        .swiper-wrapper
+          .swiper-slide
+            img(src="img/slide-1.jpg", alt="", data-background)
+            .container
+              .row
+                .col.lg-7.md-8
+                  h1 Opinia dumneavoastră este importantă pentru noi!
+                  p Dragi parteneri, rolul acestui chestionar este de a îmbunătăți si dezvolta continuu serviciile și produsele oferite de Puratos Moldova, pentru a veni în întîmpinarea nevoilor și așteptărilor dumneavoastră.
+                  p Pentru realizarea acestor obiective vă rugăm să aveți amabilitatea sa ne daruiți 5 minute din timpul dumneavoastră, pentru completarea chestionarului.
+                  p Vă asigurăm că raspunsurile dumneavoastră vor fi tratate cu confidențialitate și nu vor fi interpretate individual!
+                  p: a.btn.default Completați chestionarul
+          .swiper-slide
+            img(src="img/slide-2.jpg", alt="", data-background)
+            .container
+              .row
+                .col.lg-7.md-8
+                  h1 Lorem ipsum dolor sit amet consectetur adipisicing elit?
+                  p Dragi parteneri, rolul acestui chestionar este de a îmbunătăți si dezvolta continuu serviciile și produsele oferite de Puratos Moldova, pentru a veni în întîmpinarea nevoilor și așteptărilor dumneavoastră.
+                  p Pentru realizarea acestor obiective vă rugăm să aveți amabilitatea sa ne daruiți 5 minute din timpul dumneavoastră, pentru completarea chestionarului.
+                  p Vă asigurăm că raspunsurile dumneavoastră vor fi tratate cu confidențialitate și nu vor fi interpretate individual!
+                  p: a.btn.default Completați chestionarul
+          .swiper-slide
+            img(src="img/slide-3.jpg", alt="", data-background)
+            .container
+              .row
+                .col.lg-7.md-8
+                  h1 Totam veritatis magnam provident incidunt suscipit itaque placeat dolore!
+                  p Pentru realizarea acestor obiective vă rugăm să aveți amabilitatea sa ne daruiți 5 minute din timpul dumneavoastră, pentru completarea chestionarului.
+                  p Vă asigurăm că raspunsurile dumneavoastră vor fi tratate cu confidențialitate și nu vor fi interpretate individual!
+                  p: a.btn.default Completați chestionarul
+        svg.swiper-prev: use(xlink:href="#prev")
+        svg.swiper-next: use(xlink:href="#next")
+    section.landing--screen#about
+      .container
+        .row
+          .col.md-4: img(src="img/about.jpg", alt="")
+          .col.md-8.lg-7.offset-lg-1
+            h2 Despre noi
+            p Puratos este un grup internațional cu o gamă completă de soluții inovatoareși expertiză de aplicare în panificație, patiserie și ciocolaterie. 
+            p Sediul nostru se află în Bruxelles (Belgia), unde compania a fost fondată în 1919. Produsele și serviciile noastre sînt disponibile în mai mult de 100 de țări din întreaga lume, și, în multe cazuri, sînt produse de filialele locale.
+            p Mai presus de toate, ne propunem să fim “parteneri de încredere în inovații”, ajutând clienții noștri din întreaga lume să creeze produse care combină gustulși valoarea nutritivă și, ca urmare, contribuie la sănătatea consumatorilor și plăcerea de a mânca, în modul cel mai convenabil.
+    section.landing--screen#contacts
+      .overlay: svg: use(xlink:href="#contacts_bg")
+      .map--container: #map
+      .container
+        nav.contacts
+          h2.contacts--title Contacte
+          p.contacts--subtitle IM “Puratos-Mold” SRL
+          ul
+            li
+              i.icon <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><linearGradient id="a" x1="2" x2="14" y1="8" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#93070a"/><stop offset=".3" stop-color="#e01837"/><stop offset=".7" stop-color="#e01837"/><stop offset="1" stop-color="#93070a"/></linearGradient><path fill="url(#a)" d="M5.3 12.7l-2.1-3-1-1.9C2 7.3 2 6.7 2 6c0-1.1.3-2.1.8-3C3.4 2.1 4.1 1.4 5 .8S6.9 0 8 0s2.1.3 3 .8 1.6 1.3 2.2 2.2c.5.9.8 1.9.8 3 0 .7-.1 1.3-.3 1.8l-1 1.9-2.1 3-2.1 3c0 .2-.2.3-.5.3s-.5-.1-.6-.3l-2.1-3z"/></svg>
+              span Șos. Chișinău-Tighina 6, or. Sîngera, mun. Chișinău
+            li
+              i.icon <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><linearGradient id="a" x2="16" y1="8" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#93070a"/><stop offset=".3" stop-color="#e01837"/><stop offset=".7" stop-color="#e01837"/><stop offset="1" stop-color="#93070a"/></linearGradient><path fill="url(#a)" d="M15.4.8c.2 0 .3.1.4.3l.2.4A14.3 14.3 0 0 1 8.8 14c-2.3 1.3-4.7 2-7.3 2l-.5-.2c-.2-.1-.2-.3-.2-.4L0 12.2l.1-.5c.1-.2.2-.3.4-.3L4 9.8h.5l.3.2 1.5 1.9c1.2-.6 2.3-1.3 3.3-2.3s1.7-2 2.3-3.3L10 4.8l-.2-.4v-.5L11.3.4l.3-.4h.6l3.2.8z"/></svg>
+              a(href="tel:+37322413845") + 373 22 41 38 45
+            li
+              i.icon <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><linearGradient id="a" x1=".3" x2="15.8" y1="8" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#93070a"/><stop offset=".3" stop-color="#e01837"/><stop offset=".7" stop-color="#e01837"/><stop offset="1" stop-color="#93070a"/></linearGradient><path fill="url(#a)" d="M8 .3c1.4 0 2.7.3 3.9.9s2.1 1.4 2.8 2.4a6.7 6.7 0 0 1 1.1 3.7c0 1.3-.4 2.4-1.1 3.2-.8.9-2 1.4-3.6 1.4l-1.3-.1c-.5-.1-.8-.5-.9-.9-.3.4-.6.6-1.1.9s-.9.2-1.3.2c-.9 0-1.6-.3-2.2-.9s-.8-1.4-.8-2.4c0-.9.2-1.7.6-2.5S5 5 5.7 4.5s1.3-.6 2.1-.6c.9 0 1.5.2 1.9.7l.1-.3.3-.1h1.4c.3 0 .4.1.6.3s.2.4.2.6l-.8 3.8v.7c.1.2.2.3.5.3a2 2 0 0 0 1.3-.9c.3-.5.5-1.1.5-1.7a5 5 0 0 0-.8-2.7 5.1 5.1 0 0 0-2.1-1.7 6.8 6.8 0 0 0-5.8.1c-.9.5-1.5 1.3-2.1 2.1S2.3 7 2.3 8s.3 2 .8 2.9 1.2 1.6 2.1 2.1 1.8.8 2.8.8c1.1 0 2.2-.3 3.1-.9l.5-.1c.2 0 .3.1.5.3l.3.4.2.6c0 .2-.2.4-.3.5a8 8 0 0 1-4.2 1.3 7.6 7.6 0 0 1-6.8-4C.6 10.7.3 9.4.3 8A7.6 7.6 0 0 1 8 .3zm-.7 9.5c.3 0 .5-.1.8-.3s.6-.5.7-.8l.3-1.2c0-.4-.1-.7-.3-.9s-.4-.4-.8-.4c-.5 0-.9.2-1.3.6-.4.5-.6 1-.6 1.7 0 .4.1.7.3.9s.6.4.9.4z"/></svg>
+              a(href="mailto:office@puratos.md") office@puratos.md
+            li
+              i.icon <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><linearGradient id="a" x1=".3" x2="15.8" y1="8" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#93070a"/><stop offset=".3" stop-color="#e01837"/><stop offset=".7" stop-color="#e01837"/><stop offset="1" stop-color="#93070a"/></linearGradient><path fill="url(#a)" d="M.5 6h4.1c-.2 1.3-.2 2.7 0 4H.5C.3 9.4.3 8.7.3 8s0-1.4.2-2zm4.3-1h-4c.5-1.2 1.3-2.2 2.3-3S5.3.6 6.6.4C5.7 1.6 5.1 3.2 4.8 5zm0 6c.3 1.8.9 3.4 1.8 4.6A8 8 0 0 1 .8 11h4zm5.6-5c.2 1.3.2 2.7 0 4H5.6c-.2-1.3-.2-2.7 0-4h4.8zm-.2-1H5.8c.2-.9.4-1.8.8-2.5A6 6 0 0 1 8 .3c.5.6 1 1.3 1.4 2.2.4.7.6 1.6.8 2.5zm-4.4 6h4.4c-.2.9-.4 1.8-.8 2.5-.4.9-.8 1.7-1.4 2.3-.5-.6-1-1.3-1.4-2.2-.4-.8-.6-1.7-.8-2.6zm5.4-6c-.3-1.8-.9-3.4-1.8-4.6A8 8 0 0 1 15.2 5h-4zm0 6h3.9c-.5 1.2-1.3 2.2-2.3 3s-2.2 1.4-3.5 1.6c1-1.2 1.6-2.8 1.9-4.6zm.2-5c.2 1.3.2 2.7 0 4h4.1c.2-.6.3-1.3.3-2s-.1-1.4-.3-2h-4.1z"/></svg>
+              a(href="http://www.puratos.md") www.puratos.md
+            li
+              i.icon <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><linearGradient id="a" x2="16" y1="8" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#93070a"/><stop offset=".3" stop-color="#e01837"/><stop offset=".7" stop-color="#e01837"/><stop offset="1" stop-color="#93070a"/></linearGradient><path fill="url(#a)" d="M16 15.1l-.3.6-.6.3H11V9.8h2.1l.3-2.4H11V5.9l.2-.9c.2-.2.5-.3 1-.3h1.3V2.5l-1.9-.1c-.9 0-1.7.3-2.3.8-.5.6-.8 1.4-.8 2.4v1.8h-2v2.4h2.1V16H.9c-.3 0-.5-.1-.6-.3-.2-.1-.3-.4-.3-.6V.9C0 .6.1.4.3.3S.6 0 .9 0h14.2l.6.3c.2.1.3.3.3.6v14.2z"/></svg>
+              a(href="https://www.facebook.com/PuratosMoldova/").hyphenate https://www.facebook.com/PuratosMoldova/
+    include models/scripts
