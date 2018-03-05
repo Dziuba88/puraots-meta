@@ -685,14 +685,85 @@ html, body {
       }
     }
 
-    .menu--ctrl {
-      display: none;
+    [data-toggle=menu] {display: none;}
+
+    @include smallDown {
+      .container {
+        position: relative;
+      }
+      .main--nav {
+        position: absolute;
+        left: 0;
+        right: 0;
+        background-color: #e01837;
+
+        top: 0;
+        opacity: 0;
+        transform: scaleY(0);
+        transform-origin: top center;
+        visibility: hidden;
+        transition: .15s ease-in-out;
+
+        ul {
+          display: block;
+          text-align: center;
+          margin: 0;
+          padding: 0;
+
+          li {margin: 0;padding: 0;}
+          a {
+            font-size: 18px;
+            margin: 0 0 10px;
+            padding: 20px 0;
+          }
+        }
+      }
+
+      .open .main--nav {
+        top: 110px;
+        opacity: 1;
+        transform: scaleY(1);
+        visibility: visible;
+      }
+
+      [data-toggle=menu] {
+        flex: none;
+        display: block;
+        cursor: pointer;
+        fill: $color_logo;
+        width: 40px;height: 40px;
+        margin-left: 15px;
+        margin-top: -10px;
+        opacity: .75;
+        transition: .15s ease-in-out;
+
+        &.active {
+          fill: $color_white;
+          opacity: 1;
+        }
+      }
+
     }
   }
 
   &--content {
     flex: 1;
     padding: 65px 15px 220px;
+
+    h1.thanks {
+      color: $color_red;
+      font-size: 40px;
+      line-height: 1;
+      margin-top: 0;
+      margin-bottom: 100px;
+      text-align: center;
+      background-color: rgba( $color_white,.95);
+    }
+
+    @include smallDown {
+      padding: 15px 15px 100px;
+      h1.thanks {font-size: 30px;}
+    }
   }
   &--footer {
     flex: none;
@@ -827,7 +898,15 @@ html, body {
     }
 
 
-
+    @include smallDown {
+      height: 190px;
+      padding-top: 50px;
+      .copyryght {text-align: center;}
+      .row {
+        .col:last-child {text-align: center; padding-bottom: 20px;}
+      }
+  
+    }
   }
 }
 
@@ -835,7 +914,7 @@ html, body {
   width: 750px;
   max-width: 100%;
   margin: 0 auto;
-  overflow: hidden;
+  overflow: visible !important;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 10px 40px rgba(black,.1);
@@ -853,17 +932,21 @@ html, body {
 
     .step--form {
       position: relative;
-      padding-bottom: 178px;
+      //padding-bottom: 178px;
       padding-top: 40px;
 
       &__body {
-        padding: 0 40px;
+        padding: 0 40px 30px;
+
+        @include smallDown {padding: 0 15px;}
       }
   
       &__title {
         text-align: center;
         font-weight: 900;
         margin-bottom: 10px;
+
+        @include smallDown {font-size: 14px;line-height: 20px;}
       }
 
       select {
@@ -909,7 +992,13 @@ html, body {
           }
         }
       }
-      .col.step--form__info {padding-top: 28px;padding-left: 35px;}
+      .col.step--form__info {
+        padding-top: 28px;
+        padding-left: 35px;
+
+        @include smallDown {font-size: 14px;line-height: 20px;}
+      
+      }
       .centered {
         text-align: center;
         &--wraper {
@@ -926,6 +1015,8 @@ html, body {
           display: flex;
           cursor: pointer;
           margin-bottom: 20px;
+
+          @include smallDown {font-size: 14px;line-height: 20px;}
 
           span {
             display: block;
@@ -960,6 +1051,8 @@ html, body {
             box-shadow: inset 0 4px 10px rgba( $color_base,.3);
             @extend .transition;
           }
+
+          @include smallDown {margin-top: -4px;}
         }
 
         label:hover, input:checked + label {
@@ -989,6 +1082,8 @@ html, body {
         padding: 0 20px;
         color: #555555;
 
+        @include smallDown {font-size: 14px;}
+
         &::-webkit-input-placeholder {color: #cccccc;}
         &::-moz-placeholder {color: #cccccc;}
         &:-ms-input-placeholder {color: #cccccc;}
@@ -1004,13 +1099,15 @@ html, body {
     }
 
     .step--ctrl {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      //position: absolute;
+      //bottom: 0;
+      //left: 0;
+      //right: 0;
       text-align: center;
       padding: 0 0 30px;
       font-size: 0;
+
+      @include smallDown {padding: 20px 0;}
 
       .btn {
         display: inline-block;
@@ -1021,6 +1118,13 @@ html, body {
         padding: 10px 30px;
         border-radius: 8px;
         margin: 0 5px;
+
+        @include smallDown {
+          font-size: 14px;
+          padding: 10px 20px;
+          margin-bottom: 10px;
+        
+        }
 
         &[data-prev] {
           background-color: #f5f5f5;

@@ -47,3 +47,7 @@ i.icon {
 }
 
 img {max-width: 100% !important;}
+
+a, .btn, button, .dropdown * {
+  user-select: none;
+}
