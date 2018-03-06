@@ -39,7 +39,7 @@ $(document).ready(function() {
       speed: 1000,
       effect: 'fade',
       loop: true,
-      navigation: {nextEl: '.swiper-next',prevEl: '.swiper-prev'},
+      //navigation: {nextEl: '.swiper-next',prevEl: '.swiper-prev'},
       autoplay: true,
       delay: 7000,
     });

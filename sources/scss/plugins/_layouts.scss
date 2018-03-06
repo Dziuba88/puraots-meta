@@ -610,6 +610,10 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: stretch;
+
+    @include smallDown {
+      background-size: 320px;
+    }
   }
   &--header {
     flex: none;
@@ -748,7 +752,10 @@ html, body {
 
   &--content {
     flex: 1;
-    padding: 65px 15px 220px;
+    padding: 65px 15px 40px;
+    margin-bottom: -80px;
+    overflow: hidden;
+    min-height: 640px;
 
     h1.thanks {
       color: $color_red;
@@ -924,10 +931,12 @@ html, body {
     position: relative;
     display: block;
     height: 0;
+    overflow: hidden;
 
     &-active {
       visibility: visible;
       height: auto;
+      overflow: visible;
     }
 
     .step--form {
@@ -971,6 +980,7 @@ html, body {
           display: block;
           margin: 5px;
           cursor: pointer;
+          transition: .15s ease-in-out;
 
           svg {
             display: block;
@@ -990,6 +1000,10 @@ html, body {
             stroke-width: 0;
   
           }
+        }
+
+        .star-rating__icon:hover {
+          transform: scale(1.2)
         }
       }
       .col.step--form__info {
@@ -1029,13 +1043,27 @@ html, body {
         }
         &__input {
           flex: none;
-          width: 30px;
-          height: 30px;
-          border-radius: 100%;
-          border: 3px solid transparent;
+          width: 14px;
+          height: 14px;
           position: relative;
+          width: 30px;height: 30px;
           @extend .transition;
 
+          &:after {
+            display: block;
+            content: '';
+            width: 30px;height: 30px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -15px;
+            margin-top: -15px;
+            border: 3px solid $color_red;
+            border-radius: 100%;
+            transform: scale(0);
+            opacity: 0;
+            @extend .transition;
+          }
           &:before {
             display: block;
             content: '';
@@ -1055,16 +1083,21 @@ html, body {
           @include smallDown {margin-top: -4px;}
         }
 
-        label:hover, input:checked + label {
-          .radio-group__input:before {
-              background-color: $color_red;
-          }
+        label:hover .radio-group__input:after {
+          transform: scale(1);
+          opacity: 1;
+        }
+        label:hover .radio-group__input:before {
+          background-color: $color_red;
         }
         input:checked + label {
           .radio-group__input {
-            border: 3px solid $color_red;
             &:before {
               background-color: $color_red;
+            }
+            &:after {
+              transform: scale(1);
+              opacity: 1;
             }
           }
         }
