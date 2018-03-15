@@ -481,8 +481,14 @@ html, body {
   .container {
     position: relative;
     z-index: 5;
+    
 
     @include smallDown {background-color: #ffffff;overflow: hidden;}
+  }
+
+  @media screen and (min-width: 770px) {
+    min-height: 680px;
+    .container {height: 0;}
   }
 
   .map--container {
@@ -718,7 +724,7 @@ html, body {
           a {
             font-size: 18px;
             margin: 0 0 10px;
-            padding: 20px 0;
+            padding: 10px 0 15px;
           }
         }
       }

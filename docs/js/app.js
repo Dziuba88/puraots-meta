@@ -13,7 +13,8 @@
     var map_center = {lat: 46.9125609, lng: 28.9954971};
 
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 12,center: map_center,disableDefaultUI: true,draggable: false,scrollwheel: false
+      zoom: 12,center: map_center,disableDefaultUI: true,
+      //draggable: false,scrollwheel: false
     });
 
     var image = 'img/marker.png';
@@ -23,11 +24,11 @@
       icon: image
     });
 
-    map.addListener('center_changed', function() {
+    /*map.addListener('center_changed', function() {
       window.setTimeout(function() {
         map.panTo(marker.getPosition());
       }, 100);
-    });
+    });*/
   };
 
 $(document).ready(function() {
