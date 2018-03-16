@@ -283,7 +283,8 @@ html, body {
         transform: translateY(100px);
         opacity: 0;
         transition: .35s .2s ease-in-out;
-
+        
+        @include tabletUp {min-height: 480px;}
         @include tabletDown {
           padding: 0 58px;
         }
