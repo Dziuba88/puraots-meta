@@ -13,13 +13,13 @@
     var map_center = {lat: 46.9125609, lng: 28.9954971};
 
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 12,center: map_center,disableDefaultUI: true,
+      zoom: 14,center: map_center,disableDefaultUI: true,
       //draggable: false,scrollwheel: false
     });
 
     var image = 'img/marker.png';
     var marker = new google.maps.Marker({
-      position: {lat: 46.9125609, lng: 28.9954971},
+      position: {lat: 46.9135609, lng: 28.9854971},
       map: map,
       icon: image
     });
@@ -37,12 +37,12 @@ $(document).ready(function() {
   // Index page Slider //
   if($(".fp--slider").length) {
     var fpSwiper = new Swiper('.fp--slider', {
-      speed: 1000,
+      speed: 0,
       effect: 'fade',
       loop: true,
       //navigation: {nextEl: '.swiper-next',prevEl: '.swiper-prev'},
       autoplay: true,
-      delay: 7000,
+      delay: 3000,
     });
     
     $(window).resize(function(){
