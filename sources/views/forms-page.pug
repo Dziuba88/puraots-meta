@@ -62,8 +62,27 @@ html(lang="ro")
                   .swiper-slide
                     .step--form
                       .step--form__body
-                        .step--form__title Denumire companie
-                        .row: .col.md-6.offset-md-3: input(type="text", placeholder="Exemplu: Google SRL")
+                        .step--form__title Cum ați evalua performanța produselor Puratos comparativ cu produse similare oferite de alți furnizori ai Dvs.?
+                        .checkbox-group
+                            input#ch1(type="checkbox" value="1")
+                            label(for="ch1") 
+                              span.checkbox-group__input
+                              span.checkbox-group__label Produsele Puratos nu sunt la fel de performante calitativ față de cele ale competitorilor
+                        .checkbox-group
+                            input#ch2(type="checkbox" value="2")
+                            label(for="ch2") 
+                              span.checkbox-group__input
+                              span.checkbox-group__label Produsele Puratos nu sunt la fel de performante calitativ față de cele ale competitorilor
+                        .checkbox-group
+                            input#ch3(type="checkbox" value="3")
+                            label(for="ch3") 
+                              span.checkbox-group__input
+                              span.checkbox-group__label Produsele Puratos nu sunt la fel de performante calitativ față de cele ale competitorilor
+                        .checkbox-group
+                            input#ch4(type="checkbox" value="4")
+                            label(for="ch4") 
+                              span.checkbox-group__input
+                              span.checkbox-group__label Nu pot aprecia
                       .step--ctrl
                         .steps--indicator
                         .btn(data-prev) înapoi
@@ -149,8 +168,35 @@ html(lang="ro")
                   .swiper-slide
                     .step--form
                       .step--form__body
-                        .step--form__title Denumire companie
-                        .row: .col.md-6.offset-md-3: input(type="text", placeholder="Exemplu: Google SRL")
+                        .step--form__title Mai jos gasiti cîteva afirmatii pe care alți clienți le-au facut despre produsele noastre. In ce masura sunteti de acord cu ele?
+                        .row
+                          .col.md-6.step--form__info Puratos are un sortiment bogat de produse
+                          .col.md-6
+                            .checkbox-group
+                                input#ch7-1(type="checkbox" value="1")
+                                label(for="ch7-1") 
+                                  span.checkbox-group__input
+                                  span.checkbox-group__label Totalmente de acord
+                            .checkbox-group
+                                input#ch7-2(type="checkbox" value="2")
+                                label(for="ch7-2") 
+                                  span.checkbox-group__input
+                                  span.checkbox-group__label De acord
+                            .checkbox-group
+                                input#ch7-3(type="checkbox" value="3")
+                                label(for="ch7-3") 
+                                  span.checkbox-group__input
+                                  span.checkbox-group__label Totalmente de acord
+                            .checkbox-group
+                                input#ch7-4(type="checkbox" value="4")
+                                label(for="ch7-4") 
+                                  span.checkbox-group__input
+                                  span.checkbox-group__label De acord
+                            .checkbox-group
+                                input#ch7-5(type="checkbox" value="5")
+                                label(for="ch7-5") 
+                                  span.checkbox-group__input
+                                  span.checkbox-group__label De acord
                       .step--ctrl
                         .steps--indicator
                         .btn(data-prev) înapoi

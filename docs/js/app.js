@@ -124,10 +124,9 @@ $(document).ready(function() {
       $(this).parents('.step--form').find('[data-next]').removeAttr('disabled');
     }
   });
-  $('.star-rating__icon, .radio-group label').click(function(){
-      $(this).parents('.step--form').find('[data-next]').removeAttr('disabled');
+  $('.star-rating__icon, .radio-group label, .checkbox-group label').click(function(){
+    $(this).parents('.step--form').find('[data-next]').removeAttr('disabled');
   });
-
 });
 
 

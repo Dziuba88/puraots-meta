@@ -1112,6 +1112,83 @@ html, body {
 
       }
 
+      .checkbox-group {
+        padding: 30px 20px 0;
+        margin-bottom: -20px;
+
+        &__label {
+          padding-left: 15px;
+          color: #555555;
+        }
+
+        &__input {
+          flex: none;
+          width: 30px;
+          height: 30px;
+          border: 3px solid transparent;
+          position: relative;
+          @extend .transition;
+          @include smallDown {margin-top: -4px;}
+
+          &:before, &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;top: 50%;
+            @extend .transition;
+          }
+
+          &:before {
+            background-color: #dcdcdc;
+            width: 14px;height: 14px;
+            margin-top: -7px;margin-left: -7px;
+          }
+          &:after {
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxMS45IiB2aWV3Qm94PSIwIDAgMTYgMTEuOSI+PHBhdGggZGF0YS1uYW1lPSLvgIwiIGQ9Ik01LjQgMTEuN2EuOC44IDAgMCAwIDEuMiAwbDkuMi05LjJhLjguOCAwIDAgMCAwLTEuMUwxNC42LjJhLjcuNyAwIDAgMC0uNS0uMi44LjggMCAwIDAtLjYuMkw2IDcuNyAyLjUgNC4yYS44LjggMCAwIDAtLjYtLjIuNy43IDAgMCAwLS41LjJMLjIgNS40YS44LjggMCAwIDAgMCAxLjF6IiBmaWxsPSIjYmUwZDMwIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=);
+            background-size: 16px;
+            width: 16px;
+            height: 16px;
+            margin-top: -8px;
+            margin-left: -8px;
+            background-position: center;
+            background-repeat: no-repeat;
+            transform: scale(0);
+          }
+        }
+
+        input {
+          display: none;
+
+          + label {
+            display: flex;
+            cursor: pointer;
+            margin-bottom: 20px;
+  
+            @include smallDown {font-size: 14px;line-height: 20px;}
+  
+            span {display: block;}
+
+            &:hover .checkbox-group__input{
+              border-color: #dcdcdc;
+              &:after {transform: scale(1);opacity: 0.5;}
+              &:before {transform: scale(0);}
+            }
+          }
+
+          &:checked + label .checkbox-group__input {
+            border-color: #be0d30;
+            &:after {
+              transform: scale(1);
+              opacity: 1;
+            }
+            &:before {
+              transform: scale(0);
+            }
+          }
+        }
+        
+      }
+
       input[type=text] {
         display: block;
         width: 100%;
