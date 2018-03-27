@@ -1030,6 +1030,8 @@ html, body {
         padding: 30px 20px 0;
         margin-bottom: -20px;
 
+        * {user-select: none;}
+        
         input {display: none;}
 
         label {
@@ -1115,6 +1117,7 @@ html, body {
       .checkbox-group {
         padding: 30px 20px 0;
         margin-bottom: -20px;
+        * {user-select: none;}
 
         &__label {
           padding-left: 15px;

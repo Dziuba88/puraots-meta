@@ -124,9 +124,34 @@ $(document).ready(function() {
       $(this).parents('.step--form').find('[data-next]').removeAttr('disabled');
     }
   });
-  $('.star-rating__icon, .radio-group label, .checkbox-group label').click(function(){
-    $(this).parents('.step--form').find('[data-next]').removeAttr('disabled');
+
+  $('.step--form [type=checkbox]').click(function() {
+    if ( $(this).is(':checked') ) {
+      $(this).parents('.step--form').find('[data-next]').removeAttr('disabled');
+    } else {
+      $(this).parents('.step--form').find('[data-next]').attr('disabled', 'disabled');
+    }
   });
+
+  $('.step--form [type=radio]').click(function() {
+    if ( $(this).is(':checked') ) {
+      $(this).parents('.step--form').find('[data-next]').removeAttr('disabled');
+    } else {
+      $(this).parents('.step--form').find('[data-next]').attr('disabled', 'disabled');
+    }
+  });
+
+
+
+
+
+
+
+
+
+
+
+
 });
 
 
